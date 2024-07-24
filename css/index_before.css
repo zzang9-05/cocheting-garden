@@ -1,0 +1,231 @@
+@charset "utf-8";
+@import url('https://webfontworld.github.io/kopus/KoPubWorldBatang.css'); /* KoPub World 바탕체 (font-weight: 300, 500, 700)*/
+@import url('https://webfontworld.github.io/MaruBuri/MaruBuri.css'); /* 마루부리 (font-weight: 200, 300, 400, 600, 700) */
+
+#wrap   {
+    max-width: 1920px
+}
+/* header-logo_tnb */
+header  {
+    height: auto;
+    padding: 40px 80px 0;
+    background: #DAD7CD;
+}
+header .logo_tnb    {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+header .logo_tnb figure {
+    width: 50px;
+    height: 50px;
+    background: no-repeat center/contain;
+}
+header .logo_tnb > figure {
+    width: 320px;
+    height: 120px;
+    background-image: url(../img/logo_with_color.png);
+}
+header .logo_tnb .tnb   {
+    display: flex;
+    opacity: 0.75;
+}
+header .logo_tnb .tnb figure + figure   {margin-left: 40px;}
+header .logo_tnb .tnb figure:nth-child(1)    {
+    background-image: url(../img/icn_login.png);
+}
+header .logo_tnb .tnb figure:nth-child(2)    {
+    background-image: url(../img/icn_search2.png);
+}
+
+/* header-gnb */
+header .gnb   {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background: none;
+}
+header ul > li  {
+    position: relative;
+    width: calc(100%/5);
+    text-align: center;
+}
+header .gnb > li > a  {
+    display: block;
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    font-family: "MaruBuri", serif;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 20px 20px 0 0;
+}
+header .gnb > li > a:hover,
+header .gnb > li > a:focus,
+header .gnb > li > a:active   {
+    background: #3A5A40;
+    color: #fff;
+}
+header .gnb .sub    {
+    position: absolute;
+    top: 70px; left: 0;
+    width: 100%;
+    padding: 0;
+    border: 1px solid #efefef;
+    background: rgba(255, 255, 255, 0.8);
+    box-sizing: border-box;
+    /* hover 시, 보이게 할 예정 */
+    display: none;
+}
+header .gnb > li:nth-child(2):hover .sub {
+    display: block;
+    z-index: 10;
+}
+header .gnb .sub li {
+    width: 100%;
+    height: 50px;
+    padding: 5px 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+header .gnb .sub li:hover  {
+    border: 1px solid rgba(58, 90, 64, 0.7);
+    box-sizing: border-box;
+    color: #3A5A40;
+}
+header .gnb .sub a  {
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: 400;
+}
+/* //header */
+
+/* swiper */
+.main_visual    {
+    max-width: 100%;
+    height: 80vh;
+}
+.swiper.visual_area    {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.swiper.visual_area .swiper-slide   {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: no-repeat top 10% center/cover;
+}
+.swiper.visual_area .swiper-slide.bg01  {
+    background-image: url(../img/main_bg.jpg);
+}
+.swiper.visual_area .swiper-slide.bg02  {
+    background-image: url(../img/main_bg2.jpg);
+}
+.swiper.visual_area .swiper-slide.bg03  {
+    background-image: url(../img/main_bg3.jpg);
+}
+.swiper.visual_area .swiper-slide.bg04  {
+    background-image: url(../img/main_bg4.jpg);
+}
+
+/* pagination */
+.swiper .swiper-pagination {
+    position: absolute;
+    width: 100% !important;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+}
+.swiper-pagination-bullet {
+    position: relative;
+    width: 50px;
+    height: 10px;
+    margin: 0;
+    border-radius: 0;
+    background: none;
+}
+.swiper-pagination-bullet:before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 0;
+    background: #fff;
+    width: 100%; height: 4px;
+}
+.swiper-pagination-bullet-active {
+    position: relative;
+    background: none;
+}
+.swiper-pagination-bullet-active:before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 0;
+    width: 100%; height: 6px;
+    background: #3A5A40;
+    margin-top: -5px;
+}
+/* //main_visual */
+
+/* main */
+/* 배경색 */
+main .main_bg   {
+    position: relative;
+    z-index: -9999;
+    width: 100%;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
+main .main_bg .plant_bg  {
+    display: block;
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+    height: 882px;
+    background: #DAD7CD;
+}
+
+.shadow    {
+    width: 1420px;
+    padding: 0 8px 8px 8px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.1);
+}
+.shadow .bg_w   {
+    width: 1420px;
+    background: #fff;
+}
+.shadow .bg_w > section   {
+    padding: 120px 25px;
+}
+/* plant_area */
+.shadow .bg_w .plant_area   {
+    background: #DAD7CD;
+}
+
+/* props_area */
+.shadow .bg_w .props_area   {
+    background: #3A5A40;
+}
+.shadow .bg_w .props_area button img    {
+    width: 35px;
+}
+/* youtube_area */
+.shadow .bg_w .youtube_area   {
+    background: #588157;
+}
+/* review_area */
+.shadow .bg_w .review_area   {
+    background: #FFF;
+}
+/* //배경색 */
+/*
+폰트 
+기본은 프리텐다드
+font-family: 'KoPubWorldBatang', serif;
+font-family: 'MaruBuri', serif; */
